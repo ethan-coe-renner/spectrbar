@@ -1,10 +1,11 @@
 fn main() {
-    let bar = spectrbar::Bar::new();
+    let mut bar = spectrbar::Bar::new();
 
-    bar.add_widget("test", spectrbar::DataRetriever::Extern(Command::new("sh")
-            .arg("-c")
-							    .arg("echo hello")),false);
+    bar.add_widget(
+        "test",
+        spectrbar::DataRetriever::Extern("echo hello"),
+        false,
+    );
 
-
-    println!("{}",bar)
+    println!("{}", bar)
 }
