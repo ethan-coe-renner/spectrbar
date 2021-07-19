@@ -1,6 +1,8 @@
 #+TITLE: Spectrbar
 #+SUBTITLE: A rust library for creating spectrwm baraction binaries
 
+
+**Still in Development*
 [[https://github.com/conformal/spectrwm][Spectrwm]] provides a very simple way to use scripts to display information
 in its bar. However, the syntax for colors, fonts, etc creates lots of
 boilerplate tags necessary in the script. This library is intended
