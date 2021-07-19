@@ -1,0 +1,19 @@
+colors = ["white", "grey", "red", "yellow", "green"]
+
+[[bar.wifi]]
+id = "NET"
+command = "nmcli -t -f NAME c show --active"
+num = false
+color = ["white", "grey"]
+
+[[bar.volume]]
+id = "VOL"
+command = "pamixer --get-volume"
+num = true
+color = ["white", "grey"]
+
+[[bar.battery]]
+id = "BAT"
+file = "/sys/class/power_supply/BAT0"
+num = true
+color = ["white", "yellow", "red"]
