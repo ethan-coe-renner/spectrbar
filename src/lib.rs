@@ -170,4 +170,12 @@ mod tests {
         );
         assert_eq!(widget.update(), Data::Number(32))
     }
+    #[test]
+    fn trivial_display_bar() {
+	let mut bar = Bar::new();
+	bar.add_widget("text", DataRetriever::File("/home/ethan/code/rust/spectrbar/test.txt"),false);
+	bar.add_widget("num", DataRetriever::File("/home/ethan/code/rust/spectrbar/test.txt"),true);
+	assert_eq!(bar.to_string(), String::from("text: hello 32 | num: 32 | "))
+
+    }
 }
